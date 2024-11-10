@@ -10,7 +10,7 @@ export interface RenderShoppingListProps {
 }
 
 export const RenderShoppingList = ({ items, setItems }: RenderShoppingListProps)=> {
-    const [itemsTodo, setItemsTodo] = useState([]);
+    const [itemsTodo, setItemsTodo] = useState<Product[]>([]);
 
     useEffect(() => {
         console.log(items, "RenderShoppingList")

@@ -5,6 +5,7 @@ import { useRemoveItem } from "../hooks/useRemoveItem";
 import todo from '../assets/todo.svg';
 import trash from '../assets/trash.svg';
 import done from '../assets/done.svg';
+import { Product } from "../App";
 
 interface Item {
     id: number;
@@ -14,7 +15,7 @@ interface Item {
 }
 
 export const RenderDoneList = ({ items, setItems }: RenderShoppingListProps) => {
-    const [itemsDone, setItemsDone] = useState([])
+    const [itemsDone, setItemsDone] = useState<Product[]>([])
 
     useEffect(() => {
         console.log(items, 'feito')
